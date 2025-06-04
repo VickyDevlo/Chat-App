@@ -7,7 +7,7 @@ const SideBar = ({ selectedUser, setSelectedUser }) => {
   const navigate = useNavigate();
   return (
     <div
-      className={`bg-[#8185B2]/10 h-full p-5 overflow-y-scroll text-white ${
+      className={`bg-[#8185B2]/10 h-full p-4 overflow-y-scroll text-white ${
         selectedUser ? "max-md:hidden" : ""
       }`}
     >
@@ -17,9 +17,9 @@ const SideBar = ({ selectedUser, setSelectedUser }) => {
             onClick={() => setSelectedUser(false)}
             src={assets.logo}
             alt="logo"
-            className="max-w-40 cursor-pointer"
+            className="sm:w-56 cursor-pointer object-cover"
           />
-          <div className="relative py-2">
+          <div className="relative right-3 py-2">
             <img
               src={assets.menu_icon}
               alt="menu"
@@ -27,7 +27,7 @@ const SideBar = ({ selectedUser, setSelectedUser }) => {
               onClick={() => setShowDropdown(!showDropdown)} // Toggle on click
             />
             {showDropdown && (
-              <div className="absolute top-full right-0 z-50 w-32 p-5 rounded-md bg-[#302654] border border-gray-600 text-gray-100">
+              <div className="absolute top-full right-5 z-50 w-32 p-4 rounded-md bg-[#302654] border border-gray-600 text-gray-100">
                 <p
                   onClick={() => {
                     navigate("/profile");
@@ -71,7 +71,7 @@ const SideBar = ({ selectedUser, setSelectedUser }) => {
             onClick={() => {
               setSelectedUser(user);
             }}
-            className={`relative flex items-center gap-2 p-2 pl-4 rounded cursor-pointer max-sm:text-sm ${
+            className={`relative flex items-center gap-2 p-2 rounded cursor-pointer max-sm:text-sm ${
               selectedUser?._id === user._id && "bg-[#282442]/50"
             }`}
           >

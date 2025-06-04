@@ -10,7 +10,7 @@ const Home = () => {
     <div className="w-full h-screen sm:px-[15%] sm:py-[5%]">
       <div
         className={`backdrop-blur-md border-gray-600 border-2 rounded-2xl
-      h-[100%] grid grid-cols-1 relative ${
+      h-full grid grid-cols-1 relative ${
         selectedUser
           ? "md:grid-cols-[1fr_1.5fr_1fr] xl:grid-cols-[1fr_2fr_1fr] "
           : "md:grid-cols-2"

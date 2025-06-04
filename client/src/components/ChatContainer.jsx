@@ -12,7 +12,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
   }, []);
 
   return selectedUser ? (
-    <div className="h-full overflow-scroll relative  backdrop-blur-lg">
+    <div className="h-full overflow-scroll relative backdrop-blur-lg">
       {/* ---Header--- */}
       <div className="flex items-center gap-3 py-3 mx-4 border-b border-stone-500">
         <img
@@ -20,7 +20,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
           alt=""
           className="w-8 rounded-full"
         />
-        <p className="flex-1 text-lg text-white flex items-center gap-2">
+        <p className="flex-1 text-lg sm:text-[12px] text-white flex items-center gap-2">
           {selectedUser?.fullName}
           <span className="w-2 h-2 rounded-full bg-green-500"></span>
         </p>
@@ -37,7 +37,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
         />
       </div>
       {/* ---chat area--- */}
-      <div className="flex flex-col h-[calc(100%-120px)] overflow-y-scroll p-3 pb-6">
+      <div className="flex flex-col  h-[calc(100%-120px)] overflow-y-scroll p-3 pb-6">
         {messagesDummyData.map((msg, i) => (
           <div
             key={i}
@@ -85,7 +85,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
           <input
             type="text"
             placeholder="Send a message"
-            className="flex-1 text-sm p-3 border-none rounded-lg outline-none
+            className="flex-1 w-full text-sm p-3 border-none rounded-lg outline-none
             text-white placeholder:gray-400"
           />
           <input type="file" id="image" accept="image/png, image/jpeg" hidden />
