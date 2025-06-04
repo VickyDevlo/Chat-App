@@ -17,11 +17,11 @@ const RightSideBar = ({ selectedUser }) => {
             className="w-20 aspect-[1/1] rounded-full"
           />
 
-          <h1 className="px-1 text-xl sm:text-sm font-medium text-center flex items-center gap-1 ">
+          <h1 className="px-1 md:text-xl sm:text-sm font-medium text-center flex items-center gap-1">
             <p className="w-2 h-2 rounded-full bg-green-500" />
             {selectedUser?.fullName}
           </h1>
-          <p className="px-10 mx-auto text-[10px] text-center">{selectedUser?.bio}</p>
+          <p className="px-10 mx-auto md:text-sm sm:text-[10px] text-center">{selectedUser?.bio}</p>
         </div>
         <hr className="border-[#ffffff50] my-2" />
         <div className="px-5 text-xs">
@@ -46,7 +46,7 @@ const RightSideBar = ({ selectedUser }) => {
 
         <button
           className="absolute bottom-2 left-1/2 transform -translate-x-1/2  bg-gradient-to-r from-purple-400 to-violet-600 text-white 
-        border-none text-sm font-medium py-2 px-18 rounded-full cursor-pointer"
+        border-none text-sm font-semibold py-2 px-12 md:px-18 rounded-full cursor-pointer uppercase"
         >
           Logout
         </button>

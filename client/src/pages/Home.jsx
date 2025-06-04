@@ -7,14 +7,14 @@ const Home = () => {
   const [selectedUser, setSelectedUser] = useState(false);
 
   return (
-    <div className="w-full h-screen sm:px-[15%] sm:py-[5%]">
+    <div className="w-full h-screen  ">
       <div
-        className={`backdrop-blur-md border-gray-600 border-2 rounded-2xl
-      h-full grid grid-cols-1 relative ${
-        selectedUser
-          ? "md:grid-cols-[1fr_1.5fr_1fr] xl:grid-cols-[1fr_2fr_1fr] "
-          : "md:grid-cols-2"
-      }`}
+        className={`backdrop-blur-md border-gray-600 h-full grid 
+          grid-cols-1 relative ${
+            selectedUser
+              ? "md:grid-cols-[1fr_1.5fr_1fr] xl:grid-cols-[1fr_2fr_1fr] "
+              : "md:grid-cols-2"
+          }`}
       >
         <SideBar
           selectedUser={selectedUser}
@@ -24,7 +24,7 @@ const Home = () => {
           selectedUser={selectedUser}
           setSelectedUser={setSelectedUser}
         />
-         <RightSideBar selectedUser={selectedUser} />
+        <RightSideBar selectedUser={selectedUser} />
       </div>
     </div>
   );

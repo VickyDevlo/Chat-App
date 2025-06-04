@@ -20,7 +20,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
           alt=""
           className="w-8 rounded-full"
         />
-        <p className="flex-1 text-lg sm:text-[12px] text-white flex items-center gap-2">
+        <p className="flex-1 md:text-lg sm:text-[12px] text-white flex items-center gap-2">
           {selectedUser?.fullName}
           <span className="w-2 h-2 rounded-full bg-green-500"></span>
         </p>
