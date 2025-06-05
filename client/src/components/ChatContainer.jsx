@@ -9,7 +9,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
     if (scrollEnd.current) {
       scrollEnd.current.scrollIntoView();
     }
-  }, []);
+  }, [messagesDummyData]);
 
   return selectedUser ? (
     <div className="h-full overflow-scroll relative backdrop-blur-lg">
@@ -20,7 +20,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
           alt=""
           className="w-8 rounded-full"
         />
-        <p className="flex-1 md:text-lg sm:text-[12px] text-white flex items-center gap-2">
+        <p className="flex-1 md:text-xl sm:text-[12px] md:tracking-wider text-white flex items-center gap-2">
           {selectedUser?.fullName}
           <span className="w-2 h-2 rounded-full bg-green-500"></span>
         </p>
@@ -55,8 +55,8 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
               <p
                 className={`p-2 max-w-[200px] md:text-sm font-light rounded-lg mb-8 break-all  text-white ${
                   msg.senderId === "680f50e4f10f3cd28382ecf9"
-                    ? "rounded-br-none bg-gray-900"
-                    : "rounded-bl-none bg-emerald-900"
+                    ? "rounded-br-none bg-emerald-900"
+                    : "rounded-bl-none bg-gray-900"
                 }`}
               >
                 {msg.text}
